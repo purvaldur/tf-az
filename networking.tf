@@ -21,3 +21,8 @@ resource "azurerm_subnet" "thor-sn" {
     "10.16.1.0/24"
   ]
 }
+
+resource "azurerm_subnet_network_security_group_association" "thor-sga" {
+  subnet_id                 = azurerm_subnet.thor-sn.id
+  network_security_group_id = azurerm_network_security_group.thor-nsg.id
+}
