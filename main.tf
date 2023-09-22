@@ -9,5 +9,13 @@ terraform {
 }
 
 provider "azurerm" {
-  featues {}
+  features {}
+}
+
+resource "azurerm_resource_group" "thor-rg" {
+  name     = "thor-rg"
+  location = "West Europe"
+  tags = {
+    environment = "dev"
+  }
 }
