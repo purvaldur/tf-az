@@ -1,0 +1,1 @@
+I have activated 30 days of Azure with 200 USD credits. This repo serves as my base while I experiment with terraform azure.
