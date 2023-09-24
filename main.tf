@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+      version = "=3.74.0"
     }
   }
 }
@@ -14,7 +14,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "thor-rg" {
   name     = "thor-rg"
-  location = "West Europe"
+  location = var.location
   tags = {
     environment = "dev"
   }
